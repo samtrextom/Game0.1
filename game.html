@@ -1,0 +1,350 @@
+
+<DOCTYPE! html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="game.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="game.css">
+        <link href="https://fonts.googleapis.com/css?family=Oldenburg" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm" id="headerLeft">
+                    </div>
+                    <div class="col-sm" id="headerMid">
+                        <h1>Dragon Master</h1>
+                        <h6>By Sam Tom and Abby Snopek</h6>
+                    </div>
+                    <div class="col-sm" id="headerRight">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="partySetup">
+            <h3 style="color: aliceblue">Choose Three Heroes For Your Party</h3>
+            <div class="row" style="padding-left: 5em">
+                <div class="col">
+                    <div class="portrait">
+                        <div id="pic">
+                            <img src="Warrior.png">
+                        </div>
+                    </div>
+                    <button class="pick" id="pick" name="pick" value="warrior" class="btn btn-secondary" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='pickToolTip'>WARRIOR:<br> A TANK class that is designed to execellent at defensive maneuvers and can taunt enemies to attack him, protecting his allies. <br> ABILITIES: Attack, Protect, Taunt, Sunder Armor</div>">Warrior</button>
+                </div>
+                <div class="col">
+                    <div class="portrait">
+                        <div id="pic">
+                            <img src="Paladin.png">
+                        </div>
+                    </div>
+                    <button class="pick" id="pick" name="pick" value="paladin" class="btn btn-secondary" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='pickToolTip'>PALADIN: <br>A TANK or HEALER class that can can play a defensive role in the party including healing the party and taking the damage. <br>ABILITIES: Attack, Taunt, Heal, Holy Smite</div>">Paladin</button>
+                </div>
+                <div class="col">
+                    <div class="portrait">
+                        <div id="pic">
+                            <img src="Tracker.png">
+                        </div>
+                    </div>
+                    <button class="nopick" id="pick" name="pick" value="tracker" class="btn btn-secondary" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='pickToolTip' id='notAvailable'>TRACKER: <br>CURRENTLY UNAVAILABLE! <br>Sorry for the inconveinice. <br><br>She will be coming in patch 1.01!</div>">Tracker</button>
+                </div>
+                <div class="col">
+                    <div class="portrait">
+                        <div id="pic">
+                            <img src="Shadow%20Assassin.png">
+                        </div>
+                    </div>
+                    <button class="nopick" id="pick" name="pick" value="assassin" class="btn btn-secondary" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='pickToolTip' id='notAvailable'>SHADOW ASSASSIN: <br>CURRENTLY UNAVAILABLE! <br>Sorry for the inconveinice. <br><br>She will be coming in patch 1.01!</div>">Shadow Assassin</button>
+                </div>
+                <div class="col">
+                    <div class="portrait">
+                        <div id="pic">
+                            <img src="Rogue.png">
+                        </div>
+                    </div>
+                    <button class="pick" id="pick" name="pick" value="rogue" class="btn btn-secondary" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='pickToolTip'>ROGUE: <br>A DAMAGE class that specializes in attacking opponents with quick strikes and pinpoint accuracy.<br> ABILITIES: Attack, Bleed, Back Stab, Sunder Armor</div>">Rogue</button>
+                </div>
+            </div>
+            <div class="row" style="padding-left: 5em">
+                <div class="col">
+                    <div class="portrait">
+                        <div id="pic">
+                            <img src="Shaman.png">
+                        </div>
+                    </div>
+                    <button class="nopick" id="pick" name="pick" value="shaman" class="btn btn-secondary" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='pickToolTip' id='notAvailable'>SHAMAN: <br>CURRENTLY UNAVAILABLE!<br> Sorry for the inconveinice. <br><br>He will be coming in patch 1.01!</div>">Shaman</button>
+                </div>
+                <div class="col">
+                    <div class="portrait">
+                        <div id="pic">
+                            <img src="Priest.png">
+                        </div>
+                    </div>
+                    <button class="pick" id="pick" name="pick" value="priest" class="btn btn-secondary" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='pickToolTip'>PRIEST:<br> A HEALER class that protects the party with her ability to heal everyone at once and can provide some damage too!<br> ABILITIES: Attack, Heal, Heal Party, Holy Smite</div>">Priest</button>
+                </div>
+                <div class="col">
+                    <div class="portrait">
+                        <div id="pic">
+                            <img src="Druid.png">
+                        </div>
+                    </div>
+                    <button class="nopick" id="pick" name="pick" value="druid" class="btn btn-secondary" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='pickToolTip' id='notAvailable'>DRUID:<br> CURRENTLY UNAVAILABLE!<br> Sorry for the inconveinice.<br><br> He will be coming in patch 1.01!</div>">Druid</button>
+                </div>
+                <div class="col">
+                    <div class="portrait">
+                        <div id="pic">
+                            <img src="Warlock.png">
+                        </div>
+                    </div>
+                    <button class="pick" id="pick" name="pick" value="warlock" class="btn btn-secondary" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='pickToolTip'>WARLOCK:<br> A DAMAGE class that will use dark magics to sacrifice its own health in order to win at any costs.<br> ABILITIES: Attack, Curse of Agony, Shadow Strike, Fireball</div>">Warlock</button>
+                </div>
+                <div class="col">
+                    <div class="portrait">
+                        <div id="pic">
+                            <img src="Mage.png">
+                        </div>
+                    </div>
+                    <button class="pick" id="pick" name="pick" value="mage" class="btn btn-secondary" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='pickToolTip'>MAGE:<br> A DAMAGE class that uses many schools of magic to damage her enemies and replensh her own powers.<br> ABILITIES: Arcane Weapon, Fireball, Wind Furry, Arcane Focus</div>">Mage</button>
+                </div>
+            </div>
+            <div style="height: 20px"></div>
+            <div class="row" id="pickScreenFiller">
+                <div class="col" id="par1"></div>
+                <div class="col" id="par2"></div>
+                <div class="col" id="par3"></div>
+                <div class="col" id="par4"></div>
+                <div class="col" id="par5"></div>
+            </div>
+        </div>
+        <div id="dragon" style="display:none">
+            <div id="dragonWrap">
+                <h5 id="title">Stacy the Destroyer of Worlds</h5>
+                <p>Health</p>
+                <div id="dh0"><div id="dhBar0">100%</div></div>
+            </div>
+        </div>
+        <div id="game" style="display:none">
+            <div id="message">
+            </div>
+            <div>
+                <div id=inputDiv>
+                    <input type="text" id="command">
+                    <button id="input">Enter</button>
+                </div>
+            </div>
+            <table id ="partyTable">
+                <tr>
+                    <td>
+                        <div class="portrait">
+                            <div id="pic1"></div>
+                        </div>
+                        <div id="barFrame">
+                            <div id="p1" class="name"></div>
+                            <div id="h0"><div id="hBar0"></div></div>
+                            <div id="m0"><div id="mBar0"></div></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="portrait">
+                            <div id="pic2"></div>
+                        </div>
+                        <div id="barFrame">
+                            <div id="p2" class="name"></div>
+                            <div id="h1"><div id="hBar1"></div></div>
+                            <div id="m1"><div id="mBar1"></div></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="portrait">
+                            <div id="pic3"></div>
+                        </div>
+                        <div id="barFrame">
+                            <div id="p3" class="name"></div>
+                            <div id="h2"><div id="hBar2"></div></div>
+                            <div id="m2"><div id="mBar2"></div></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="portrait">
+                            <div id="pic4"></div>
+                        </div>
+                        <div id="barFrame">
+                            <div id="p4" class="name"></div>
+                            <div id="h3"><div id="hBar3"></div></div>
+                            <div id="m3"><div id="mBar3"></div></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="portrait">
+                            <div id="pic5"></div>
+                        </div>
+                        <div id="barFrame">
+                            <div id="p5" class="name"></div>
+                            <div id="h4"><div id="hBar4"></div></div>
+                            <div id="m4"><div id="mBar4"></div></div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="combat" style="display:none">
+            <div id="displayName"></div>
+            <table id="abilities">
+                <!-- WARRIOR-->
+                
+                <tr id="Warrior" style="display:none">
+                    <td><button type="button" class="atk ability btn btn-secondary" data-toggle="tooltip" data-html="true"   data-placement="bottom" title="<div class='abilityToolTip'>COST: none <br> ATTACK will deal a base damage equal to the Warrior's Attack rating.</div>">Attack</button></td>
+                    <td><div class="dropdown">
+                        <button class="dropbtn ability btn btn-secondary" data-toggle="tooltip" data-html="true"   data-placement="top" title="<div class='abilityToolTip'>COST: none<br> PROTECT will increase the defense of a target party member for the next turn.</div>">Protect</button>
+                        <div class="dropdown-content">
+                            <button type ="button" class="ability pro" id="pro0" value="0">Protect Ref 0</button>
+                            <button type ="button" class="ability pro" id="pro1" value="1">Protect Ref 1</button>
+                            <button type ="button" class="ability pro" id="pro2" value="2">Protect Ref 2</button>
+                            <button type ="button" class="ability pro" id="pro3" value="3">Protect Ref 3</button>
+                            <button type ="button" class="ability pro" id="pro4" value="4">Protect Ref 4</button>
+                        </div>
+                        </div></td>
+                    <td><button type="button" class="ability btn btn-secondary taunt" data-toggle="tooltip" data-html="true"   data-placement="bottom" title="<div class='abilityToolTip'>COST: none <br> SUNDER AARMOR will lower the enemies defenses by 10%.</div>" id="sunder">Sunder Armor</button></td>
+                    <td><button type="button" class="ability btn btn-secondary" data-toggle="tooltip" data-html="true"   data-placement="bottom" title="<div class='abilityToolTip'>COST: none <br> TAUNT will attract the enemy to attack the Warrior instead of the Warrior's party members</div>">Taunt</button></td>
+                </tr>
+                <!-- PRIEST-->
+                
+                <tr id="Priest" style="display:none">
+                    <td><button type="button" class="ability atk btn btn-secondary" data-toggle="tooltip" data-html="true"   data-placement="bottom" title="<div class='abilityToolTip'>COST: none <br> ATTACK will deal a base damage equal to the Priest's Attack rating.</div>">Attack</button></td>
+                    <td><div class="dropdown">
+                        <button class="dropbtn ability btn btn-secondary" data-toggle="tooltip" data-html="true"   data-placement="top" title="<div class='abilityToolTip'>COST: 20 mana <br> HEAL will heal the selected party member a base amount of health points equal to the Priest's Intellect rating.</div>">Heal</button>
+                        <div class="dropdown-content">
+                            <button type ="button" class="ability heal" id="heal0" value="0">Heal Ref 0</button>
+                            <button type ="button" class="ability heal" id="heal1" value="1">Heal Ref 1</button>
+                            <button type ="button" class="ability heal" id="heal2" value="2">Heal Ref 2</button>
+                            <button type ="button" class="ability heal" id="heal3" value="3">Heal Ref 3</button>
+                            <button type ="button" class="ability heal" id="heal4" value="4">Heal Ref 4</button>
+                        </div>
+                        </div></td>
+                    <td><button type="button" class="ability btn btn-secondary" data-toggle="tooltip" data-html="true"   data-placement="bottom" title="<div class='abilityToolTip'>COST: 40 mana <br> HEAL PARTY will heal all party members a base heal equal to the Priest's Intellect rating.</div>" id="healParty">Heal Party</button></td>
+                    <td><button type="button" class="ability btn btn-secondary revive" data-toggle="tooltip" data-html="true"   data-placement="bottom" title="<div class='abilityToolTip'>COST: 20 mana <br> HOLY SMITE will deal a base amount of damage equal to the Paladin's Intellect rating.</div>">Holy Smite</button></td>
+                </tr>
+                <!-- MAGE-->
+                
+                <tr id="Mage" style="display:none">
+                    <td><button type='button' class="ability atk btn btn-secondary" data-toggle="tooltip" data-html="true"   data-placement="bottom" title="<div class='abilityToolTip'>COST: none <br> ATTACK will deal base damage equal equal to the Mage's Attack rating.</div>">Arcane Weapon</button></td>
+                    <td><button type='button' class="ability btn btn-secondary" data-toggle="tooltip" data-html="true"   data-placement="bottom" title="<div class='abilityToolTip'>COST: 40 mana <br> FIREBALL will deal a base damage equal to the Mage's Intellect rating.</div>" id='fireball'>Fireball</button></td>
+                    <td><button type='button' class="ability btn btn-secondary" data-toggle="tooltip" data-html="true"   data-placement="bottom" title="<div class='abilityToolTip'>COST: 20 mana <br> WIND FLURRY will deal damage 5 times base on half of the Mage's Intellect rating.</div>" id='frost'>Wind Flurry</button></td>
+                    <td><button type='button' class="ability btn btn-secondary" data-toggle="tooltip" data-html="true"   data-placement="bottom" title="<div class='abilityToolTip'>COST: none <br> ARCANE FOCUS will increase the Mage's current mana by 75.</div>" id='focus'>Arcane Focus</button></td>
+                </tr>
+                <!-- PALADIN-->
+                
+                <tr id="Paladin" style="display:none">
+                    <td><button type='button' class="ability atk btn btn-secondary" data-toggle="tooltip" data-html="true"  data-placement="bottom" title="<div class='abilityToolTip'>COST: none <br> ATTACK will deal base damage equal equal to the Paladin's Attack rating.</div>">Attack</button></td>
+                    <td><div class="dropdown">
+                        <button class="ability dropbtnbtn btn-secondary" data-toggle="tooltip" data-html="true"  data-placement="top" title="<div class='abilityToolTip'>COST: 20 mana <br> HEAL will heal the selected party member a base amount of health points equal to the Paladin's Intellect rating.</div>" id="ability">Heal</button>
+                        <div class="dropdown-content">
+                            <button type ="button" class="ability heal" id="healp0" value="0">Heal Ref 0</button>
+                            <button type ="button" class="ability heal" id="healp1" value="1">Heal Ref 1</button>
+                            <button type ="button" class="ability heal" id="healp2" value="2">Heal Ref 2</button>
+                            <button type ="button" class="ability heal" id="healp3" value="3">Heal Ref 3</button>
+                            <button type ="button" class="ability heal" id="healp4" value="4">Heal Ref 4</button>
+                        </div>
+                        </div></td>
+                    <td><button type='button' class="ability btn btn-secondary revive" data-toggle="tooltip" data-html="true"  data-placement="bottom" title="<div class='abilityToolTip'>COST: 20 mana <br> HOLY SMITE will deal a base amount of damage equal to the Paladin's Intellect rating.</div>">Holy Smite</button></td>
+                    <td><button type='button' class="ability btn btn-secondary taunt" data-toggle="tooltip" data-html="true"  data-placement="bottom" title="<div class='abilityToolTip'>COST: none <br> TAUNT will attract the enemy to attack the Paladin instead of the Paladin's party members</div>">Taunt</button></td>
+                </tr>
+                <!-- TRACKER-->
+                
+                <tr id="Tracker" style="display:none">
+                    <td><button type='button' class="ability atk">Attack</button></td>
+                    <td><button type='button' class="ability" id='fireball'>T2</button></td>
+                    <td><button type='button' class="ability" id='frost'>T3</button></td>
+                    <td><button type='button' class="ability" id='focus'>T4</button></td>
+                </tr>
+                <!-- SHADOW ASSASIN-->
+                
+                <tr id="Assassin" style="display:none">
+                    <td><button type='button' class="ability atk">Attack</button></td>
+                    <td><button type='button' class="ability" id='tauntSA'>Taunt</button></td>
+                    <td><button type='button' class="ability" id='shadowForm'>Shadow Form</button></td>
+                    <td><button type='button' class="ability" id='shadowStrike'>Shadow Strike</button></td>
+                </tr>
+                <!-- ROGUE-->
+                
+                <tr id="Rogue" style="display:none">
+                    <td><button type='button' class="ability btn btn-secondary" data-toggle="tooltip" data-html="true" data-placement="bottom" title="<div class='abilityToolTip'>COST: none <br>ATTACK will deal base damage equal to the Rogue's Attack rating and will generate 20 mana.</div>" id="rogueAtk">Attack</button></td>
+                    <td><button type='button' class="ability btn btn-secondary" data-toggle="tooltip" data-html="true" data-placement="bottom" title="<div class='abilityToolTip'>COST: 100 mana <br>BLEED will deal 1000 damage. THATS CHEATING!</div>" id="win">Bleed</button></td>
+                    <td><button type='button' class="ability btn btn-secondary" data-toggle="tooltip" data-html="true" data-placement="bottom" title="<div class='abilityToolTip'>COST: 60 mana <br>BACK STAB will deal 100 damage.</div>" id="backStab">Back Stab</button></td>
+                    <td><button type='button' class="ability btn btn-secondary" data-toggle="tooltip" data-html="true" data-placement="bottom" title="<div class='abilityToolTip'>COST: none <br>SUNDER ARMOR will lower the enemies defenses by 10%.</div>" id="rogueSunder">Sunder Armor</button></td>
+                </tr>
+                <!-- SHAMAN-->
+                
+                <tr id="Shaman" style="display:none">
+                    <td><button type='button' class="ability atk">Attack</button></td>
+                    <td><div class="dropdown">
+                        <button class="dropbtn" class="ability">Heal</button>
+                        <div class="dropdown-content">
+                            <button type ="button" class="ability heal" id="heals0" value="0">Heal Ref 0</button>
+                            <button type ="button" class="ability heal" id="heals1" value="1">Heal Ref 1</button>
+                            <button type ="button" class="ability heal" id="heals2" value="2">Heal Ref 2</button>
+                            <button type ="button" class="ability heal" id="heals3" value="3">Heal Ref 3</button>
+                            <button type ="button" class="ability heal" id="heals4" value="4">Heal Ref 4</button>
+                        </div>
+                        </div></td>
+                    <td><button type='button' class="ability" id='chainHeal'>Chain Heal</button></td>
+                    <td><button type='button' class="ability" id='lightningBolt'>Lightning Bolt</button></td>
+                </tr>
+                <!-- DRUID-->
+                
+                <tr id="Druid" style="display:none">
+                    <td><button type='button' class="ability atk">Attack</button></td>
+                    <td><div class="dropdown">
+                        <button class="dropbtn" class="ability">Heal</button>
+                        <div class="dropdown-content">
+                            <button type ="button" class="ability heal" id="heald0" value="0">Heal Ref 0</button>
+                            <button type ="button" class="ability heal" id="heald1" value="1">Heal Ref 1</button>
+                            <button type ="button" class="ability heal" id="heald2" value="2">Heal Ref 2</button>
+                            <button type ="button" class="ability heal" id="heald3" value="3">Heal Ref 3</button>
+                            <button type ="button" class="ability heal" id="heald4" value="4">Heal Ref 4</button>
+                        </div>
+                        </div></td>
+                    <td><button type='button' class="ability" id='frost'>D2</button></td>
+                    <td><button type='button' class="ability" id='focus'>D3</button></td>
+                </tr>
+                <!-- WARLOCK-->
+                
+                <tr id="Warlock" style="display:none">
+                    <td><button type='button' class="ability btn btn-secondary" data-toggle="tooltip" data-html="true" data-placement="bottom" title="<div class='abilityToolTip'>COST: none <br> ATTACK will deal a base damage equal to the warlock's Attack rating.</div>" id="warlockAtk">Attack</button></td>
+                    <td><button type='button' class="ability btn btn-secondary" data-toggle="tooltip" data-html="true" data-placement="bottom" title="<div class='abilityToolTip'>COST: 10 mana <br> CURSE OF AGONY will deal 10 damage per turn for 10 turns.</div>" id="curse">Curse of Agony</button></td>
+                    <td><button type='button' class="ability btn btn-secondary" data-toggle="tooltip" data-html="true" data-placement="bottom" title="<div class='abilityToolTip'>COST: health <br> SHADOW STRIKE will deal a base damage equal to the warlocks Intellect rating and will cost the warlock health points same as the amount of damage dealt.</div>" id="warlockShadowStrike">Shadow Strike</button></td>
+                    <td><button type='button' class="ability btn btn-secondary" data-toggle="tooltip" data-html="true" data-placement="bottom" title="<div class='abilityToolTip'>COST: 40 mana <br> FIREBALL will deal a base damage equal to the warlocks Intellect rating.</div>" id="warlockFireBall">Fireball</button></td>
+                </tr>
+            </table>
+        </div>
+        <p>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">Help</button>
+            <button class="btn btn-primary" id="combatLogButton" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Combat Log</button>
+        </p>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <div><h6>Combat Log</h6></div>
+                <div id="combatLog"></div>
+            </div>
+        </div>
+        <div class="collapse" id="collapseExample1">
+            <div class=" card card-body">
+                <div></div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div>
+            <div id="footBot">
+                Copyright &copy; 2018 Team Red Shoes Games
+                <br>
+                <a href="samtrextom@gmail.com">samtrextom@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+</html>

@@ -1,0 +1,374 @@
+.dropdown 
+{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a 
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover 
+{
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
+
+.dropdown:hover .dropbtn 
+{
+    background-color: #3e8e41;
+}
+
+#inputDiv
+{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 28.5em;
+}
+table
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#party
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#dh0
+{
+    width: 800px;
+    height: 30px;
+    background-color:#55201F;
+    border-radius: 7px;
+    display: inline-block;
+}
+
+#dhBar0
+{
+  width: 100%;
+  height: 30px;
+  background-color: red;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+    border-radius: 7px;
+    
+}
+
+#h0, #h1, #h2, #h3, #h4
+{
+    margin-top: 5px;
+    width: 100px;
+    height: 15px;
+    background-color:#55201F;
+    border-radius: 5px;
+}
+
+#hBar0, #hBar1, #hBar2, #hBar3, #hBar4
+{
+    width: 100%;
+    height: 15px;
+    background-color: red;
+    text-align: center;
+    line-height: 15px;
+    color: black;
+    border-radius: 5px;
+}
+
+#m0, #m1, #m2, #m3, #m4
+{
+    margin-top: 5px;
+    width: 100px;
+    height: 15px;
+    background-color:#3A739B;
+    border-radius: 5px;
+}
+
+#mBar0, #mBar1, #mBar2, #mBar3, #mBar4
+{
+    width: 100%;
+    height: 15px;
+    background-color: #60C6DC;
+    text-align: center;
+    line-height: 15px;
+    color: black;
+    border-radius: 5px;
+}
+
+#partySetup
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#game
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#message
+{
+    margin-left: auto;
+    margin-right: auto;
+    border-style: ridge;
+    height:200px;
+    width: 100%;
+}
+
+#memberTurn
+{
+    border-style: ridge;
+    height:50px;
+    width: 100%;
+}
+
+#command
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#dragonWrap
+{
+    padding-top: 13em;
+    text-align: center;
+}
+
+#title
+{
+    font-size: 70px;
+    background-color: darkslategray;
+    color: aliceblue;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+
+#dragon
+{
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("dragon.jpg");
+    background-repeat: no-repeat;
+    height:400px;
+    align-content: center;
+    background-color: black;
+}
+
+#dragonText
+{
+    color:darkgreen;
+    font-size: 20px;
+}
+
+.ability
+{
+    width:200px;
+    height: 50px;
+}
+
+#pick
+{
+    width:200px;
+    height: 50px;
+}
+
+.portrait
+{
+    height: 240px;
+    width: 200px;
+    border-style: ridge;
+    background-repeat: no-repeat;
+    font-size: 20px;
+    color: aliceblue;
+    background-image: url(background2.jpg);
+}
+
+#pic
+{
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 180px;
+    width: 120px;
+}
+
+.name
+{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+}
+
+#pic1, #pic2, #pic3, #pic4, #pic5
+{
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 180px;
+    width: 120px;
+}
+
+footer
+{
+    height: 200px;
+    background-color: darkslategrey;
+    width: 100%;
+    color: aliceblue;
+}
+
+header
+{
+    width: 100%;
+    height: 120px;
+    background-image: url("rsz_headermid.png");
+    background-color: darkslategrey;
+    color: aliceblue;
+    align-content: center;
+}
+
+#headerLeft
+{
+    width: 250px;
+    height: 120px;
+    background-image: url("rsz_header.png");
+    background-repeat: no-repeat;
+    float: left;
+}
+
+#headerMid
+{
+    height: 120px;
+    width: 80%;
+    background-image: url("rsz_headermid.png");
+}
+
+#headerRight
+{
+    height: 120px;
+    width: 300px;
+    background-image: url("rsz_headerright.png");
+    float: right;
+    background-repeat: no-repeat;
+}
+
+body
+{
+    background-image: url("background.jpg");
+    font-family: 'Oldenburg', cursive;
+}
+
+#message
+{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: antiquewhite;
+    width:1010px;
+    height: 175px;
+}
+
+#game
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#partyTable
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pickScreenFiller
+{
+    padding-top: 25px;
+    height: 150px;
+    background-color: antiquewhite;
+    font-size: 25px;
+}
+
+#barFrame
+{
+    height: 80px;
+    width: 200px;
+    border-style: ridge;
+    font-size: 20px;
+    color: black;
+    background-color: antiquewhite;
+}
+
+#displayName
+{
+    height: 20px;
+    width: 800px;
+    background-color: antiquewhite;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.pickToolTip
+{
+    height: 225px;
+    width: 185px;
+    border-style: ridge;
+    background-repeat: no-repeat;
+    font-family: 'Oldenburg', cursive;
+    font-size: 14px;
+    color: aliceblue;
+}
+
+#notAvailable
+{
+    color: red;
+}
+
+.abilityToolTip
+{
+    height: 150px;
+    width: 200px;
+    border-style: ridge;
+    font-family: 'Oldenburg', cursive;
+    font-size: 14px;
+    color: aliceblue;
+    text-align: left;
+}
+
+/*.dropdown, .dropdown-content, .dropdown-content a, .dropdown:hover .dropdown-content, .dropdown:hover .dropbtn, #inputDiv, table, #party, #dh0, #dhBar0
+{
+  font-family: 'Oldenburg', cursive;  
+}
+
+#h0, #h1, #h2, #h3, #h4, #hBar0, #hBar1, #hBar2, #hBar3, #hBar4, #m0, #m1, #m2, #m3, #m4, #mBar0, #mBar1, #mBar2, #mBar3, #mBar4, #partySetup
+{
+    font-family: 'Oldenburg', cursive; 
+}
+
+#game, #message, #memberTurn, #command, #dragonWrap, #dragon, #dragonText, .ability, .pick, .portrait, #pic, .name, #pic1, #pic2, #pic3, #pic4, #pic5
+{
+    font-family: 'Oldenburg', cursive; 
+}
+
+footer, header, */
